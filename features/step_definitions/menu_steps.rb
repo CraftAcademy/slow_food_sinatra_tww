@@ -8,7 +8,7 @@ When("the user visits the site") do
 end
 
 Then("the user should se the {string}") do |text|
-  visit "/menu"
+  
   expect(page).to have_content text
 end
 
