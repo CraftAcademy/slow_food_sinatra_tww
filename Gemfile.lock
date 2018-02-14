@@ -53,6 +53,8 @@ GEM
     gherkin (5.0.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
+    launchy (2.4.3)
+      addressable (~> 2.3)
     method_source (0.9.0)
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
@@ -128,6 +130,7 @@ DEPENDENCIES
   database_cleaner (~> 1.4.1)
   factory_bot
   faker
+  launchy
   pg (= 0.21.0)
   pry-byebug
   rack-test
