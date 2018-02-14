@@ -8,6 +8,8 @@ gem 'pg'
 # Sinatra driver
 gem 'sinatra'
 gem 'sinatra-contrib'
+gem 'sinatra-flash'
+gem 'sinatra-redirect-with-flash'
 
 gem 'activerecord'
 gem 'activesupport'
@@ -28,4 +30,6 @@ end
 group :test, :development do
   gem 'factory_bot'
   gem 'faker'
+  gem 'cucumber'
+  gem 'pry-byebug'
 end
