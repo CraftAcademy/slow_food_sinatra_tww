@@ -22,6 +22,7 @@ gem 'shotgun'
 group :test do
   gem 'capybara'
   gem 'database_cleaner', '~> 1.4.1'
+  gem 'launchy'
   gem 'rack-test'
   gem 'rspec'
   gem 'shoulda-matchers'
@@ -33,4 +34,5 @@ group :test, :development do
   gem 'faker'
   gem 'cucumber'
   gem 'pry-byebug'
+  gem 'timecop'
 end
