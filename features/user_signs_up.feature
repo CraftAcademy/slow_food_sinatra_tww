@@ -12,4 +12,4 @@ Feature: User can sign up
     And He fills in a "password_confirmation" with "password1"
     And He clicks "submit"
     And He sees message "signup successful"
-    And He should be on "main page"
+    

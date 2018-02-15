@@ -20,13 +20,9 @@ Then("He fills in a {string} with {string}") do |string, string2|
 end
 
 Then("He clicks {string}") do |string|
-  click_button('submit')
+  click_on(string)
 end
 
 Then("He sees message {string}") do |string|
   page.should have_content('signup successful')
-end
-
-Then("He should be on {string}") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
 end
