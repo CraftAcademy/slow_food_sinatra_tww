@@ -1,7 +1,7 @@
 Given("the following products exist:") do |table|
   table.hashes.each do |product|
-    @menu = Menu.find_or_create_by(name: product[:Menu])
-    Product.create(catagory: product[:Catagory], name: product[:Name], menu: @menu)
+    menu = Menu.find_or_create_by(name: product[:menu])
+    Product.create(catagory: product[:catagory], name: product[:name], menu: menu)
   end
 end
 

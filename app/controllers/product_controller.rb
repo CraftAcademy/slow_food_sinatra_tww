@@ -7,8 +7,8 @@ class SlowFoodApp
 
 
   get '/menu' do
-    @menu = Product.all
-    @menu_name = Menu.name
+    #@menu = Product.all
+    @menu = Menu.first
     erb :menu
   end
 end
