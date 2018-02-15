@@ -9,6 +9,9 @@ Background:
 
 Scenario:
   When the user visits the site
-  Then the user should se the "Menu"
-  And user should se the "Pasta"
-  And user should se the "Köttbullar"
+  Then the user should see the "Menu"
+  And  the user should see "Starter"
+  And  the user should see "Main Course"
+  And  the user should see "Desert"
+  And user should see the "Pasta"
+  And user should see the "Köttbullar"

@@ -2,9 +2,29 @@
 <div class="">
   <h1><%= @menu_name %></h1>
   <% @menu.each do |product| %>
-    <h1><%= product[:name] %></h1>
-    <p> <%= product[:catagory] %> </p>
-    <p> <%= product[:description]%> </p>
-    <p> <%= product[:price]%> </p>
+    <% if product[:catagory] == 'Starter' %>
+        <div class="startes">
+            <h1><%= product[:catagory] %></h1>
+            <h3><%= product[:name] %></h3>
+            <p> <%= product[:description]%> </p>
+            <p> <%= product[:price]%> </p>
+        </div>
+    <% end %>
+    <% if product[:catagory] == 'Main Course    ' %>
+        <div class="main-course">
+            <h1><%= product[:catagory] %></h1>
+            <h3><%= product[:name] %></h3>
+            <p> <%= product[:description]%> </p>
+            <p> <%= product[:price]%> </p>
+        </div>
+      <% end %>
+    <% if product[:catagory] == 'Desert' %>
+        <div class="desert">
+            <h1><%= product[:catagory] %></h1>
+            <h3><%= product[:name] %></h3>
+            <p> <%= product[:description]%> </p>
+            <p> <%= product[:price]%> </p>
+        </div>
+    <% end %>
   <% end %>
 </div>
