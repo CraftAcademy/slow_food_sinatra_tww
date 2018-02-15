@@ -12,15 +12,30 @@ Then("He should be redirected to {string}") do |string|
 end
 
 Then("He fills in {string} with {string}") do |string, string2|
-  pending # Write code here that turns the phrase above into concrete actions
+  fill_in('name', :with => 'Holger') # Write code here that turns the phrase above into concrete actions
 end
 
 Then("He fills in a {string} with {string}") do |string, string2|
-  pending # Write code here that turns the phrase above into concrete actions
+  #find('input_password').set 'password1'
+  # within("[@id='input_password']") do
+  #fill_in 'password', :with => 'password1'
+  #    end
+  fill_in('password', :with => 'password1')
+   # Write code here that turns the phrase above into concrete actions
 end
 
-When("He clicks {string}") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+Then("He fills in a {string} with {string}") do |string, string2|
+# pending
+# #   #find('password_confirmation').set 'password1'
+# #   # within("[@id='password_confirmation']") do
+# #   #      fill_in 'password_confirmation', :with => 'password1'
+# #   #    end
+  fill_in('password_confirmation', :with => 'password1')
+# #    # Write code here that turns the phrase above into concrete actions
+end
+
+Then("He clicks {string}") do |string|
+ # Write code here that turns the phrase above into concrete actions
 end
 
 Then("He sees message {string}") do |string|

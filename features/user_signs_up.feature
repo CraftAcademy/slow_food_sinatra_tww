@@ -10,6 +10,6 @@ Feature: User can sign up
     And He fills in "name" with "Holger"
     And He fills in a "password" with "password1"
     And He fills in "password_confirmation" with "password1"
-    When He clicks "submit"
-    Then He sees message "signup successful"
+    And He clicks "submit"
+    And He sees message "signup successful"
     And He should be on "main page"
