@@ -4,11 +4,9 @@ to be able to let costumers buy food.
 You want to display a Menu on a page.
 
 Background:
-  Given "Pasta" is in "Menu"
-  And "Köttbullar" is in "Menu"
-  And "Starter" is in "Menu"
-  And "Main Course" is in "Menu"
-  And "Desert" is in "Menu"
+  Given "Pasta" is a "Starter" on "Menu"
+  And "Köttbullar" is a "Main Course" on "Menu"
+  And "Semla" is a "Desert" on "Menu"
 
 Scenario:
   When the user visits the menu page
