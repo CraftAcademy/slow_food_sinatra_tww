@@ -3,13 +3,12 @@ class SlowFoodApp
   get '/' do
     erb :welcome
   end
-  # 
-  # get '/menu' do
-  #   erb :menu
-  # end
 
-  post '/menu' do
+
+
+  get '/menu' do
     @menu = Product.all
+    @menu_name = Menu.name
     erb :menu
   end
 end

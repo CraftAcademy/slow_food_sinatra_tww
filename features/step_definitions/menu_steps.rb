@@ -8,10 +8,10 @@ When("the user visits the site") do
 end
 
 Then("the user should se the {string}") do |text|
-  
+
   expect(page).to have_content text
 end
 
-Then("user should se the {string}") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+Then("user should se the {string}") do |text|
+  expect(page).to have_content text
 end
