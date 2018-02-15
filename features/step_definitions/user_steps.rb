@@ -1,22 +1,15 @@
 Given("User visits the site") do
-  visit '/' # Write code here that turns the phrase above into concrete actions
-end
+  visit '/'
 
 When("User clicks on the {string} button") do |button|
-  # binding.pry
-  click_on(button) # Write code here that turns the phrase above into concrete actions
-end
+  click_on(button)
 
 Then("He should be redirected to {string}") do |string|
-  visit '/signup'
+  visit string
 end
 
-Then("He fills in {string} with {string}") do |string, string2|
-  fill_in('name', :with => 'Holger') # Write code here that turns the phrase above into concrete actions
-end
-
-Then("He fills in a {string} with {string}") do |string, string2|
-  fill_in 'password', :with => 'password1'
+Then("He fills in {string} with {string}") do |field, input|
+  fill_in(field, :with => input) 
 end
 
 Then("He clicks {string}") do |string|

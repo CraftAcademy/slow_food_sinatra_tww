@@ -8,8 +8,7 @@ Feature: User can sign up
     When User clicks on the "Sign up" button
     Then He should be redirected to "/signup"
     And He fills in "name" with "Holger"
-    And He fills in a "password" with "password1"
-    And He fills in a "password_confirmation" with "password1"
+    And He fills in "password" with "password1"
+    And He fills in "password_confirmation" with "password1"
     And He clicks "submit"
     And He sees message "signup successful"
-    
