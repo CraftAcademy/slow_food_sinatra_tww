@@ -1,6 +1,6 @@
 Given("{string} is in {string}") do |product_name, menu_name|
   @menu = Menu.create(name: menu_name)
-  Product.create(name: product_name, menu: @menu)
+  Product.create(catagory: "Starter", name: product_name, menu: @menu)
 end
 
 When("the user visits the menu page") do

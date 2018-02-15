@@ -7,6 +7,8 @@ Background:
   Given "Pasta" is in "Menu"
   And "Köttbullar" is in "Menu"
   And "Starter" is in "Menu"
+  And "Main Course" is in "Menu"
+  And "Desert" is in "Menu"
 
 Scenario:
   When the user visits the menu page
