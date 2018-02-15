@@ -16,30 +16,15 @@ Then("He fills in {string} with {string}") do |string, string2|
 end
 
 Then("He fills in a {string} with {string}") do |string, string2|
-  #find('input_password').set 'password1'
-  # within("[@id='input_password']") do
-  #fill_in 'password', :with => 'password1'
-  #    end
-  fill_in('password', :with => 'password1')
-   # Write code here that turns the phrase above into concrete actions
-end
-
-Then("He fills in a {string} with {string}") do |string, string2|
-# pending
-# #   #find('password_confirmation').set 'password1'
-# #   # within("[@id='password_confirmation']") do
-# #   #      fill_in 'password_confirmation', :with => 'password1'
-# #   #    end
-  fill_in('password_confirmation', :with => 'password1')
-# #    # Write code here that turns the phrase above into concrete actions
+  fill_in 'password', :with => 'password1'
 end
 
 Then("He clicks {string}") do |string|
- # Write code here that turns the phrase above into concrete actions
+  click_button('submit')
 end
 
 Then("He sees message {string}") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+  page.should have_content('signup successful')
 end
 
 Then("He should be on {string}") do |string|
