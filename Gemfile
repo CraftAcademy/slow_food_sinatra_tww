@@ -10,7 +10,7 @@ gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'sinatra-flash'
 gem 'sinatra-redirect-with-flash'
-gem "warden", "1.2.1"
+gem "warden"
 
 gem 'activerecord'
 gem 'activesupport'
@@ -19,7 +19,7 @@ gem 'bcrypt'
 gem 'rake'
 
 gem 'shotgun'
-gem 'rack-flash3'
+# gem 'rack-flash3'
 
 
 
