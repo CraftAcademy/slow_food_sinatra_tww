@@ -1,8 +1,10 @@
 Given("User visits the site") do
   visit '/'
+end
 
 When("User clicks on the {string} button") do |button|
   click_on(button)
+end
 
 Then("He should be redirected to {string}") do |link|
   visit link

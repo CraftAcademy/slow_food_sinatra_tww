@@ -5,8 +5,14 @@ class SlowFoodApp
   end
 
   post '/' do
-    User.create(name: params[:name], password: params[:password])
-    @message = "signup successful"
+    if params[:name].present? && params[:password] != params[:password_confirmation]
+      @message = "Passwords must match"
+    elsif params[:name].blank? || params[:password].blank? || params[:password_confirmation].blank?
+      @message = "Please enter all fields"
+    elsif params[:name].present? && params[:password].present? && params[:password_confirmation].present?
+      User.create(name: params[:name], password: params[:password])
+      @message = "signup successful"
+    end
     erb :welcome
   end
 
