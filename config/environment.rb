@@ -14,7 +14,7 @@ require 'sinatra/redirect_with_flash'
 require 'sinatra/reloader' if development?
 require 'pry' unless production?
 require 'warden'
-require_relative '../app/controllers/helpers/warden'
+require_relative '../app/helpers/warden'
 
 require 'erb'
 
@@ -51,5 +51,5 @@ class SlowFoodApp < Sinatra::Base
   end
 end
 
-Dir[APP_ROOT.join('app', 'controllers', '*.rb')].each { |file| require file }
 Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
+Dir[APP_ROOT.join('app', 'controllers', '*.rb')].each { |file| require file }

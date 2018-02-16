@@ -29,7 +29,13 @@
         <a href="/login">Login</a>
         <a href="/auth/create">Sign up</a>
       <% end %>
+    </div>
   </header>
+
+
+  <% flash.keys.each do |type| %>
+    <%= flash[type] %>
+  <% end %>
   <%= yield %>
 </div>
 </body>
