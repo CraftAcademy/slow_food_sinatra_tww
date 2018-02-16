@@ -18,11 +18,10 @@ gem 'bcrypt'
 gem 'rake'
 
 gem 'shotgun'
-
+gem 'warden'
 group :test do
   gem 'capybara'
   gem 'database_cleaner', '~> 1.4.1'
-  gem 'launchy'
   gem 'rack-test'
   gem 'rspec'
   gem 'shoulda-matchers'

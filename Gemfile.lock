@@ -116,6 +116,8 @@ GEM
     timecop (0.9.1)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
+    warden (1.2.7)
+      rack (>= 1.0)
     xpath (3.0.0)
       nokogiri (~> 1.8)
 
@@ -144,6 +146,7 @@ DEPENDENCIES
   sinatra-flash
   sinatra-redirect-with-flash
   timecop
+  warden
 
 RUBY VERSION
    ruby 2.4.1p111
