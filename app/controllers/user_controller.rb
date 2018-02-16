@@ -1,9 +1,5 @@
 class SlowFoodApp
-
-  get '/' do
-    erb :welcome
-  end
-
+  
   post '/' do
     if params[:name].present? && params[:password] != params[:password_confirmation]
       @message = "Passwords must match"
