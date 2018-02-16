@@ -34,6 +34,7 @@ class SlowFoodApp < Sinatra::Base
   set :views, File.join(APP_ROOT, 'app', 'views')
   set :public_folder, File.join(APP_ROOT, 'public')
   set :show_exceptions, false
+
 end
 
 Dir[APP_ROOT.join('app', 'controllers', '*.rb')].each { |file| require file }

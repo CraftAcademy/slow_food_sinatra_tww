@@ -25,7 +25,7 @@ class SlowFoodApp
     end
 
     post '/auth/create' do
-        binding.pry
+        
     end
 
 end
