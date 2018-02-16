@@ -3,11 +3,14 @@ source 'https://rubygems.org'
 ruby '2.4.1'
 
 # PostgreSQL driver
-gem 'pg'
+gem 'pg', '0.21.0'
 
 # Sinatra driver
 gem 'sinatra'
 gem 'sinatra-contrib'
+gem 'sinatra-flash', require: 'sinatra/flash'
+gem 'sinatra-redirect-with-flash'
+gem "warden"
 
 gem 'activerecord'
 gem 'activesupport'
@@ -23,9 +26,13 @@ group :test do
   gem 'rack-test'
   gem 'rspec'
   gem 'shoulda-matchers'
+  gem 'launchy'
 end
 
 group :test, :development do
   gem 'factory_bot'
   gem 'faker'
+  gem 'cucumber'
+  gem 'pry-byebug'
+  gem 'timecop'
 end
