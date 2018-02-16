@@ -13,6 +13,8 @@ require 'sinatra/flash'
 require 'sinatra/redirect_with_flash'
 require 'sinatra/reloader' if development?
 require 'pry' unless production?
+require 'warden'
+require_relative '../app/controllers/helpers/warden'
 
 require 'erb'
 
@@ -35,6 +37,18 @@ class SlowFoodApp < Sinatra::Base
   set :public_folder, File.join(APP_ROOT, 'public')
   set :show_exceptions, false
 
+  use Warden::Manager do |config|
+    config.serialize_into_session { |user| user.id }
+    config.serialize_from_session { |id| User.get(id) }
+    config.scope_defaults :default,
+                          strategies: [:password],
+                          action: 'auth/unauthenticated'
+    config.failure_app = self
+  end
+
+  Warden::Manager.before_failure do |env, opts|
+    env['REQUEST_METHOD'] = 'POST'
+  end
 end
 
 Dir[APP_ROOT.join('app', 'controllers', '*.rb')].each { |file| require file }

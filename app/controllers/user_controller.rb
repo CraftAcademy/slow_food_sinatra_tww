@@ -1,31 +1,19 @@
-require 'warden'
-require_relative 'helpers/warden'
-
 class SlowFoodApp
-  enable :sessions
-    # register Sinatra::Flash
-    # register Sinatra::Warden
-    set :session_secret, 'supersecret'
+  get '/auth/create' do
+      erb :signup
+  end
 
-    use Warden::Manager do |config|
-      config.serialize_into_session { |user| user.id }
-      config.serialize_from_session { |id| User.get(id) }
-      config.scope_defaults :default,
-                            strategies: [:password],
-                            action: 'auth/unauthenticated'
-      config.failure_app = self
+
+  post '/auth/create' do
+    user = User.new(name: params[:name], password: params[:password])
+    if user.valid?
+      # binding.pry
+      user.save
+      env['warden'].authenticate!
+      @message = "Successfully created account for #{current_user.username}"
+      redirect '/'
+    else
+      @message = "Unsuccessful"
     end
-
-    Warden::Manager.before_failure do |env, opts|
-      env['REQUEST_METHOD'] = 'POST'
-    end
-
-    get '/auth/create' do
-        erb :signup
-    end
-
-    post '/auth/create' do
-        
-    end
-
+  end
 end

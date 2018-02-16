@@ -1,7 +1,9 @@
-<form action="/auth/create" method="post">
-  <input type="text" name="name" placeholder="USERNAME">
+<form method="post">
+  <input type="text" name="name" id="name" placeholder="USERNAME">
   <input type="text" name="password" placeholder="PASSWORD">
   <input type="text" name="password_confirmation" placeholder="CONFIRM PASSWORD">
 
   <input type="submit" name="submit" value="submit">
 </form>
+
+<h1> <%= @message %> </h1>

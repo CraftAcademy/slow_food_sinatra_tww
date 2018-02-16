@@ -8,7 +8,7 @@ gem 'pg', '0.21.0'
 # Sinatra driver
 gem 'sinatra'
 gem 'sinatra-contrib'
-gem 'sinatra-flash'
+gem 'sinatra-flash', require: 'sinatra/flash'
 gem 'sinatra-redirect-with-flash'
 gem "warden"
 
@@ -19,7 +19,7 @@ gem 'bcrypt'
 gem 'rake'
 
 gem 'shotgun'
-gem 'warden'
+
 group :test do
   gem 'capybara'
   gem 'database_cleaner', '~> 1.4.1'
