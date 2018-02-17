@@ -1,3 +1,37 @@
+body {
+    background: linear-gradient(to right, #1F487E , #93A6C0);
+}
 .menu-content{
   grid-area: menu-content;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3,auto);
+  grid-gap: 1em;
+
 }
+
+.title {
+    padding-top: 70px;
+    text-align: center;
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    font-size: 92px;
+
+}
+
+.design {
+    border: 1px solid #000;
+    text-align: center;
+    border-radius: 25px;
+    color: white;
+    font: bold 24px/45px italic, Sans-Serif;
+    letter-spacing: -1px;
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+
+}
+
+.design,
+       p {
+         color: rgb(255,215,0)
+       }
