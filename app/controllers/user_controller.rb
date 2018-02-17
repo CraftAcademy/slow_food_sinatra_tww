@@ -3,6 +3,15 @@ class SlowFoodApp
     erb :signup
   end
 
+  get '/login' do
+    erb :login
+  end
+
+  post '/login' do
+    env['warden'].authenticate!
+    message = "Login successful"
+    redirect '/', notice: message
+  end
 
   post '/auth/create' do
     user = User.create(name: params[:name], password: params[:password])

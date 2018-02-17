@@ -1,5 +1,13 @@
+Given("User has an account") do
+  User.create(name: 'Holger', password: 'password1')
+end
+
 Given("User visits the site") do
   visit '/'
+end
+
+Given("User visits {string}") do |string|
+  visit '/login'
 end
 
 When("User clicks on the {string} button") do |button|
