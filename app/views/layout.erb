@@ -12,6 +12,7 @@
   -->
   <link rel="stylesheet" href="/css/application.css">
   <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/menu.css">
 
   <!-- Load Vollkorn font -->
   <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,400' rel='stylesheet' type='text/css'>
@@ -23,7 +24,7 @@
 </head>
 <body>
 <div class="main-wrapper" id="content">
-  <header>
+
     <div class="header" id="login-toolbar">
       <% if current_user %>
         <a href="/logout">Logout</a>
@@ -32,7 +33,7 @@
         <a href="/auth/create">Sign up</a>
       <% end %>
     </div>
-  </header>
+  
 
 
   <% flash.keys.each do |type| %>
