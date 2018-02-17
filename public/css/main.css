@@ -1,0 +1,39 @@
+.main-wrapper{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "header" "splash" "main-content" "menu-content" "user-content" "footer";
+}
+
+.header{
+  grid-area: header;
+  top: 0;
+  position: fixed;
+  text-align: center;
+  color: black;
+  font-size: 1em;
+  width: 100%;
+  background-color: blue;
+  left: 0;
+}
+
+.splash{
+  grid-area: splash;
+}
+
+.main-content{
+  grid-area: main-content;
+  padding-top: 30px;
+}
+
+.menu-content{
+  grid-area: menu-content;
+}
+
+.user-content{
+  grid-area: user-content;
+}
+
+footer{
+  grid-area: footer;
+}
