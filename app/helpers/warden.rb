@@ -1,6 +1,4 @@
 Warden::Strategies.add(:password) do
-
-
   def authenticate!
     user = User.find_by(name: params['name'])
 
