@@ -15,11 +15,12 @@
   -webkit-box-shadow: 0 0 20px white;
   text-align: center;
 
+
 }
 
 input[type=text] {
   text-align: center;
-  width: 50%;
+  width: 90%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -28,7 +29,8 @@ input[type=text] {
           box-sizing: border-box;
   margin-top: 4px;
   margin-bottom: 13px;
-  resize: vertical; }
+  resize: vertical;
+}
 
 input[type=submit]:hover {
   background-color: #204060;
@@ -41,5 +43,6 @@ input[type=submit] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  width: 90%
 
 }
