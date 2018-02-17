@@ -1,31 +1,113 @@
+.listing {
+  list-style: none;
+  margin: 2em;
+  display: grid;
+  grid-gap: 60px;
+  grid-template-columns: repeat(auto-fill,minmax(400px, 1fr));
+}
+
+.listing li {
+  border: 1px solid #ffe066;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.listing .body {
+  padding: 10px;
+}
+
+
 .main-wrapper{
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  grid-template-areas: "header" "splash" "main-content" "menu-content" "user-content" "footer";
+  grid-template-areas: "header" "bg-splash" "main-content" "menu-content" "user-content" "footer";
+}
+
+body {
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
+    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
+    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
+    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+  padding: 0;
+  text-align: center;
+  margin: 0;
 }
 
 .header{
   grid-area: header;
   top: 0;
   position: fixed;
-  text-align: center;
+  text-align: left;
   color: black;
   font-size: 1em;
   width: 100%;
-  background-color: blue;
+  background-color: #3ea0d8;
   left: 0;
+  height: auto;
 }
 
-.splash{
-  grid-area: splash;
+.header.right-side{
+  text-align: right;
+
+}
+
+.footer{
+  grid-area: footer;
+  bottom: 0;
+  position: relative;
+  text-align: left;
+  color: black;
+  font-size: 1em;
+  width: 200%;
+  background-color: #3ea0d8;
+  left: 0;
+  height: auto;
+  margin-left: -300px;
+}
+
+a {
+  padding: 20px 10px;
+  color: white;
+}
+
+a:visited{
+  color: white;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+li {
+  display: inline;
+  padding: 24px 25px 19px 25px;
+}
+
+li:hover{
+  padding: 24px 25px 19px 25px;
+  background-color: rgba(255,255,255, 0.3);
+}
+
+.bg-splash{
+  grid-area: bg-splash;
+  background-image: url('../img/food.jpg');
+  background-position: 50% 60%;
+  background-size: cover;
+  height: 500px;
+  margin-left: -300px;
+  width: 170%;
 }
 
 .main-content{
   grid-area: main-content;
-  padding-top: 30px;
+  margin-left: -250px;
+  margin-right: -300px;
+  display: grid;
+  grid-template-rows: auto;
 }
-
 .menu-content{
   grid-area: menu-content;
 }
