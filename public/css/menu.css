@@ -13,8 +13,9 @@ body {
 .title {
     padding-top: 70px;
     text-align: center;
-    font-size: 30px;
-    font-style: italic;
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    font-size: 92px;
+
 }
 
 .design {
@@ -29,3 +30,8 @@ body {
     padding: 10px;
 
 }
+
+.design,
+       p {
+         color: rgb(255,215,0)
+       }
