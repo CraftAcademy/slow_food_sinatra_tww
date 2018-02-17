@@ -24,9 +24,6 @@
 </head>
 <body>
 <div class="main-wrapper" id="content">
-  <div class="bg-splash">
-
-  </div>
   <div class="header">
     <% if current_user %>
     <ul>
@@ -44,7 +41,7 @@
 
     <% end %>
   </div>
-
+  <div class="bg-splash"></div>
 
   <% flash.keys.each do |type| %>
     <%= flash[type] %>

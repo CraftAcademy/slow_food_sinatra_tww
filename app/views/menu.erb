@@ -1,36 +1,8 @@
-<<<<<<< HEAD
-
-<div>
-  <h1><%= @menu.name %></h1>
-  <% @menu.products.each do |product| %>
-    <% if product.catagory == 'Starter' %>
-        <div class="startes">
-            <h1><%= product.catagory %></h1>
-            <h3><%= product.name %></h3>
-            <p> <%= product.description%> </p>
-            <p> <%= product.price%> </p>
-        </div>
-    <% end %>
-    <% if product.catagory == 'Main Course' %>
-        <div class="main-course">
-          <h1><%= product.catagory %></h1>
-          <h3><%= product.name %></h3>
-          <p> <%= product.description%> </p>
-          <p> <%= product.price%> </p>
-        </div>
-      <% end %>
-    <% if product.catagory == 'Dessert' %>
-        <div class="dessert">
-          <h1><%= product.catagory %></h1>
-          <h3><%= product.name %></h3>
-          <p> <%= product.description%> </p>
-          <p> <%= product.price%> </p>
-=======
-<div class="title">
+<div class="page-title">
+  <div class="title">
     <h1><%= @menu.name %></h1>
+  </div>
 </div>
-
-
 
 <div class="menu-content">
   <% @menu.products.each do |product| %>
@@ -41,7 +13,7 @@
            <div class="card-section">
              <h4><%= product.name %></h4>
              <p> <%= product.description%> </p>
-             <p> <%= product.price%> </p>
+             <p> <%= product.price%> kr </p>
           </div>
         </div>
     <% end %>
@@ -52,7 +24,7 @@
            <div class="card-section">
              <h4><%= product.name %></h4>
              <p> <%= product.description%> </p>
-             <p> <%= product.price%> </p>
+             <p> <%= product.price%> kr</p>
           </div>
         </div>
       <% end %>
@@ -63,9 +35,8 @@
            <div class="card-section">
              <h4><%= product.name %></h4>
              <p> <%= product.description%> </p>
-             <p> <%= product.price%> </p>
+             <p> <%= product.price%> kr</p>
           </div>
->>>>>>> oskar/master
         </div>
     <% end %>
   <% end %>
