@@ -1,29 +1,42 @@
+<div class="page-title">
+  <div class="title">
+    <h1><%= @menu.name %></h1>
+  </div>
+</div>
 
-<div>
-  <h1><%= @menu.name %></h1>
+<div class="menu-content">
   <% @menu.products.each do |product| %>
     <% if product.catagory == 'Starter' %>
-        <div class="startes">
-            <h1><%= product.catagory %></h1>
-            <h3><%= product.name %></h3>
-            <p> <%= product.description%> </p>
-            <p> <%= product.price%> </p>
+        <div class="card design" style="width: 300px;">
+          <div class="card-divider"><h4><%= product.catagory %></h4></div>
+            <img src="http://placeimg.com/300/150/nature">
+           <div class="card-section">
+             <h4><%= product.name %></h4>
+             <p> <%= product.description%> </p>
+             <p> <%= product.price%> kr </p>
+          </div>
         </div>
     <% end %>
     <% if product.catagory == 'Main Course' %>
-        <div class="main-course">
-          <h1><%= product.catagory %></h1>
-          <h3><%= product.name %></h3>
-          <p> <%= product.description%> </p>
-          <p> <%= product.price%> </p>
+        <div class="card design" style="width: 300px;">
+          <div class="card-divider"><h4><%= product.catagory %></h4></div>
+            <img src="http://placeimg.com/300/150/nature">
+           <div class="card-section">
+             <h4><%= product.name %></h4>
+             <p> <%= product.description%> </p>
+             <p> <%= product.price%> kr</p>
+          </div>
         </div>
       <% end %>
     <% if product.catagory == 'Dessert' %>
-        <div class="dessert">
-          <h1><%= product.catagory %></h1>
-          <h3><%= product.name %></h3>
-          <p> <%= product.description%> </p>
-          <p> <%= product.price%> </p>
+        <div class="card design" style="width: 300px;">
+          <div class="card-divider"><h4><%= product.catagory %></h4></div>
+            <img src="http://placeimg.com/300/150/nature">
+           <div class="card-section">
+             <h4><%= product.name %></h4>
+             <p> <%= product.description%> </p>
+             <p> <%= product.price%> kr</p>
+          </div>
         </div>
     <% end %>
   <% end %>
