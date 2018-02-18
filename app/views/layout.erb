@@ -12,8 +12,10 @@
   -->
   <link rel="stylesheet" href="/css/application.css">
   <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/menu.css">
   <link rel="stylesheet" href="/css/login.css">
   <link rel="stylesheet" href="/css/signup.css">
+
 
 
   <!-- Load Vollkorn font -->
@@ -26,22 +28,36 @@
 </head>
 <body>
 <div class="main-wrapper" id="content">
-  <header>
-    <div class="header" id="login-toolbar">
-      <% if current_user %>
-        <a href="/logout">Logout</a>
-      <% else %>
-        <a href="/login">Login</a>
-        <a href="/auth/create">Sign up</a>
-      <% end %>
-    </div>
-  </header>
+  <div class="header">
+    <% if current_user %>
+    <ul>
+      <li> <a href="/">Home</a></li>
+      <li> <a href="/menu">Menu</a></li>
+      <li> <a href="/logout">Logout</a></li>
+    </ul>
+    <% else %>
+      <ul>
+        <li> <a href="/">Home</a></li>
+        <li> <a href="/menu">Menu</a></li>
+        <li> <a href="/login">Login</a></li>
+        <li> <a href="/auth/create">Sign up</a></li>
+      </ul>
 
+    <% end %>
+  </div>
+  <div class="bg-splash"></div>
 
   <% flash.keys.each do |type| %>
     <%= flash[type] %>
   <% end %>
   <%= yield %>
+
+  <div class="footer">
+    <ul>
+      <li> Address: 1234 Food Avenue </li>
+      <li> Phone: (604) 123-4567 </li>
+    </ul>
+  </div>
 </div>
 </body>
 </html>
