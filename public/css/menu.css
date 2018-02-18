@@ -2,6 +2,7 @@ body {
     /* background: linear-gradient(to right, #1F487E , #93A6C0); */
 }
 .menu-content{
+  padding-left: 70px;
   grid-area: menu-content;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

@@ -1,22 +1,3 @@
-.listing {
-  list-style: none;
-  margin: 2em;
-  display: grid;
-  grid-gap: 60px;
-  grid-template-columns: repeat(auto-fill,minmax(400px, 1fr));
-}
-
-.listing li {
-  border: 1px solid #ffe066;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-}
-
-.listing .body {
-  padding: 10px;
-}
-
 .main-wrapper{
   display: grid;
   grid-template-columns: 1fr;
@@ -56,13 +37,12 @@ body {
   text-align: left;
   color: black;
   font-size: 1em;
-  width: 150%;
+  width: 100%;
   background-color: #3ea0d8;
-  left: 0;
   height: auto;
-  margin-left: -300px;
-  margin-top: 30px;
+  margin-top: 50px;
 }
+
 
 a {
   padding: 20px 10px;
@@ -82,7 +62,7 @@ li {
   padding: 24px 25px 19px 25px;
 }
 
-li:hover{
+.header li:hover{
   padding: 24px 25px 19px 25px;
   background-color: rgba(255,255,255, 0.3);
 }
@@ -90,11 +70,10 @@ li:hover{
 .bg-splash{
   grid-area: bg-splash;
   background-image: url('../img/food.jpg');
-  background-position: 50% 60%;
+  background-position: 10% 50%;
   background-size: cover;
-  height: 500px;
-  margin-left: -300px;
-  width: 150%;
+  height: 400px;
+  width: 100%;
 }
 
 
@@ -106,19 +85,30 @@ li:hover{
 
 .main-content{
   grid-area: main-content;
-  margin-left: -250px;
-  margin-right: -300px;
+  /* margin-left: -250px;
+  margin-right: -300px; */
   display: grid;
   grid-template-rows: auto;
-}
-.menu-content{
-  grid-area: menu-content;
-}
-
-.user-content{
-  grid-area: user-content;
 }
 
 h1{
   margin: 10px;
+}
+.listing {
+  list-style: none;
+  margin: 2em;
+  display: grid;
+  grid-gap: 60px;
+  grid-template-columns: repeat(auto-fill,minmax(400px, 1fr));
+}
+
+.listing li {
+  border: 1px solid #ffe066;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.listing .body {
+  padding: 10px;
 }
